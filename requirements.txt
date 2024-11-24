@@ -1,0 +1,11 @@
+py-solc-x
+slither-analyzer>=0.8.1
+z3-solver>=4.8.0
+pandas>=1.0.0
+requests>=2.25.0
+tqdm>=4.65.0
+pytest>=7.0.0
+mythril>=0.23.0
+mypy>=0.910
+black>=21.5b2
+flake8>=3.9.0

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .slide {
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .title-slide {
+            background: #1a365d;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .workflow {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .diagram {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Title Slide -->
+<div class="slide title-slide">
+    <h1>EthBMC: Ethereum Smart Contract Model Checker</h1>
+    <h3>A Comprehensive Static Analysis Framework</h3>
+    <p>Technical Deep Dive & Workflow Analysis</p>
+</div>
+
+<!-- Overview Slide -->
+<div class="slide">
+    <h2>1. System Overview</h2>
+    <div class="content">
+        <h3>Core Components:</h3>
+        <ul>
+            <li>EthBMC Engine</li>
+            <li>Benchmark Downloader</li>
+            <li>Solidity Parser</li>
+            <li>Testing Framework</li>
+        </ul>
+    </div>
+    <div class="diagram">
+        <svg viewBox="0 0 800 200">
+            <rect x="50" y="50" width="150" height="60" fill="#4a90e2" />
+            <text x="125" y="85" text-anchor="middle" fill="white">EthBMC Engine</text>
+            
+            <rect x="250" y="50" width="150" height="60" fill="#50c878" />
+            <text x="325" y="85" text-anchor="middle" fill="white">Benchmark Downloader</text>
+            
+            <rect x="450" y="50" width="150" height="60" fill="#f4a460" />
+            <text x="525" y="85" text-anchor="middle" fill="white">Solidity Parser</text>
+            
+            <rect x="650" y="50" width="150" height="60" fill="#ba55d3" />
+            <text x="725" y="85" text-anchor="middle" fill="white">Testing Framework</text>
+            
+            <!-- Connection lines -->
+            <path d="M 200 80 L 250 80" stroke="black" stroke-width="2"/>
+            <path d="M 400 80 L 450 80" stroke="black" stroke-width="2"/>
+            <path d="M 600 80 L 650 80" stroke="black" stroke-width="2"/>
+        </svg>
+    </div>
+</div>
+
+<!-- Workflow Slide -->
+<div class="slide">
+    <h2>2. Analysis Workflow</h2>
+    <div class="workflow">
+        <svg viewBox="0 0 800 400">
+            <!-- Input -->
+            <rect x="50" y="50" width="120" height="60" fill="#4a90e2" rx="5"/>
+            <text x="110" y="85" text-anchor="middle" fill="white">Smart Contract Input</text>
+            
+            <!-- Parsing -->
+            <rect x="250" y="50" width="120" height="60" fill="#50c878" rx="5"/>
+            <text x="310" y="85" text-anchor="middle" fill="white">Solidity Parsing</text>
+            
+            <!-- Analysis -->
+            <rect x="450" y="50" width="120" height="60" fill="#f4a460" rx="5"/>
+            <text x="510" y="85" text-anchor="middle" fill="white">Vulnerability Analysis</text>
+            
+            <!-- Results -->
+            <rect x="650" y="50" width="120" height="60" fill="#ba55d3" rx="5"/>
+            <text x="710" y="85" text-anchor="middle" fill="white">Results Generation</text>
+            
+            <!-- Arrows -->
+            <path d="M 170 80 L 250 80" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+            <path d="M 370 80 L 450 80" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+            <path d="M 570 80 L 650 80" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+            
+            <!-- Detailed Process Steps -->
+            <rect x="50" y="150" width="720" height="200" fill="#f5f5f5" rx="5"/>
+            <text x="70" y="180" fill="black" font-size="14">1. Contract Loading</text>
+            <text x="70" y="210" fill="black" font-size="14">2. AST Generation</text>
+            <text x="70" y="240" fill="black" font-size="14">3. Pattern Detection</text>
+            <text x="70" y="270" fill="black" font-size="14">4. Risk Assessment</text>
+            <text x="70" y="300" fill="black" font-size="14">5. Metrics Computation</text>
+        </svg>
+    </div>
+</div>
+
+<!-- Vulnerability Detection Slide -->
+<div class="slide">
+    <h2>3. Vulnerability Detection Process</h2>
+    <div class="diagram">
+        <svg viewBox="0 0 800 300">
+            <!-- Overflow Detection -->
+            <rect x="50" y="50" width="200" height="200" fill="#4a90e2" opacity="0.1" rx="10"/>
+            <text x="150" y="80" text-anchor="middle" fill="black" font-weight="bold">Integer Overflow</text>
+            <text x="150" y="110" text-anchor="middle" fill="black" font-size="12">Pattern Analysis</text>
+            <text x="150" y="130" text-anchor="middle" fill="black" font-size="12">SafeMath Detection</text>
+            <text x="150" y="150" text-anchor="middle" fill="black" font-size="12">Complexity Scoring</text>
+            
+            <!-- Reentrancy Detection -->
+            <rect x="300" y="50" width="200" height="200" fill="#50c878" opacity="0.1" rx="10"/>
+            <text x="400" y="80" text-anchor="middle" fill="black" font-weight="bold">Reentrancy</text>
+            <text x="400" y="110" text-anchor="middle" fill="black" font-size="12">Call Pattern Analysis</text>
+            <text x="400" y="130" text-anchor="middle" fill="black" font-size="12">State Update Tracking</text>
+            <text x="400" y="150" text-anchor="middle" fill="black" font-size="12">Guard Detection</text>
+            
+            <!-- Access Control -->
+            <rect x="550" y="50" width="200" height="200" fill="#f4a460" opacity="0.1" rx="10"/>
+            <text x="650" y="80" text-anchor="middle" fill="black" font-weight="bold">Access Control</text>
+            <text x="650" y="110" text-anchor="middle" fill="black" font-size="12">Modifier Analysis</text>
+            <text x="650" y="130" text-anchor="middle" fill="black" font-size="12">Permission Checking</text>
+            <text x="650" y="150" text-anchor="middle" fill="black" font-size="12">Critical Function ID</text>
+        </svg>
+    </div>
+</div>
+
+<!-- Metrics and Evaluation Slide -->
+<div class="slide">
+    <h2>4. Metrics & Evaluation Framework</h2>
+    <div class="content">
+        <svg viewBox="0 0 800 300">
+            <!-- Metrics Box -->
+            <rect x="50" y="50" width="300" height="200" fill="#4a90e2" opacity="0.1" rx="10"/>
+            <text x="200" y="80" text-anchor="middle" fill="black" font-weight="bold">Performance Metrics</text>
+            <text x="200" y="120" text-anchor="middle" fill="black" font-size="12">Precision: TP/(TP+FP)</text>
+            <text x="200" y="150" text-anchor="middle" fill="black" font-size="12">Recall: TP/(TP+FN)</text>
+            <text x="200" y="180" text-anchor="middle" fill="black" font-size="12">F-measure: 2*(P*R)/(P+R)</text>
+            
+            <!-- Evaluation Box -->
+            <rect x="450" y="50" width="300" height="200" fill="#50c878" opacity="0.1" rx="10"/>
+            <text x="600" y="80" text-anchor="middle" fill="black" font-weight="bold">Evaluation Process</text>
+            <text x="600" y="120" text-anchor="middle" fill="black" font-size="12">Ground Truth Generation</text>
+            <text x="600" y="150" text-anchor="middle" fill="black" font-size="12">Benchmark Analysis</text>
+            <text x="600" y="180" text-anchor="middle" fill="black" font-size="12">Result Validation</text>
+        </svg>
+    </div>
+</div>
+
+<!-- Qualitative Analysis Slide -->
+<div class="slide">
+    <h2>5. Qualitative Analysis</h2>
+    <div class="content">
+        <svg viewBox="0 0 800 400">
+            <!-- Soundness Box -->
+            <rect x="50" y="50" width="300" height="150" fill="#4a90e2" opacity="0.1" rx="10"/>
+            <text x="200" y="80" text-anchor="middle" fill="black" font-weight="bold">Soundness Analysis</text>
+            <text x="200" y="110" text-anchor="middle" fill="black" font-size="12">Pattern Recognition Accuracy</text>
+            <text x="200" y="130" text-anchor="middle" fill="black" font-size="12">False Positive Rate</text>
+            <text x="200" y="150" text-anchor="middle" fill="black" font-size="12">Detection Reliability</text>
+            
+            <!-- Completeness Box -->
+            <rect x="450" y="50" width="300" height="150" fill="#50c878" opacity="0.1" rx="10"/>
+            <text x="600" y="80" text-anchor="middle" fill="black" font-weight="bold">Completeness Analysis</text>
+            <text x="600" y="110" text-anchor="middle" fill="black" font-size="12">Vulnerability Coverage</text>
+            <text x="600" y="130" text-anchor="middle" fill="black" font-size="12">Edge Case Handling</text>
+            <text x="600" y="150" text-anchor="middle" fill="black" font-size="12">Detection Scope</text>
+            
+            <!-- Analysis Results -->
+            <rect x="50" y="220" width="700" height="150" fill="#f4a460" opacity="0.1" rx="10"/>
+            <text x="400" y="250" text-anchor="middle" fill="black" font-weight="bold">Key Findings</text>
+            <text x="400" y="280" text-anchor="middle" fill="black" font-size="12">Strong pattern-based detection accuracy</text>
+            <text x="400" y="300" text-anchor="middle" fill="black" font-size="12">Effective for common vulnerability types</text>
+            <text x="400" y="320" text-anchor="middle" fill="black" font-size="12">Limited coverage for complex attack vectors</text>
+            <text x="400" y="340" text-anchor="middle" fill="black" font-size="12">Reliable for standard security practices</text>
+        </svg>
+    </div>
+</div>
+
+<!-- Testing Framework Slide -->
+<div class="slide">
+    <h2>6. Testing Framework</h2>
+    <div class="workflow">
+        <svg viewBox="0 0 800 300">
+            <!-- Unit Testing -->
+            <rect x="50" y="50" width="200" height="200" fill="#4a90e2" opacity="0.1" rx="10"/>
+            <text x="150" y="80" text-anchor="middle" fill="black" font-weight="bold">Unit Testing</text>
+            <text x="150" y="110" text-anchor="middle" fill="black" font-size="12">Vulnerability Detection</text>
+            <text x="150" y="130" text-anchor="middle" fill="black" font-size="12">Pattern Recognition</text>
+            <text x="150" y="150" text-anchor="middle" fill="black" font-size="12">Metric Computation</text>
+            
+            <!-- Integration Testing -->
+            <rect x="300" y="50" width="200" height="200" fill="#50c878" opacity="0.1" rx="10"/>
+            <text x="400" y="80" text-anchor="middle" fill="black" font-weight="bold">Integration Tests</text>
+            <text x="400" y="110" text-anchor="middle" fill="black" font-size="12">Component Integration</text>
+            <text x="400" y="130" text-anchor="middle" fill="black" font-size="12">Workflow Validation</text>
+            <text x="400" y="150" text-anchor="middle" fill="black" font-size="12">End-to-End Testing</text>
+            
+            <!-- Benchmark Testing -->
+            <rect x="550" y="50" width="200" height="200" fill="#f4a460" opacity="0.1" rx="10"/>
+            <text x="650" y="80" text-anchor="middle" fill="black" font-weight="bold">Benchmark Tests</text>
+            <text x="650" y="110" text-anchor="middle" fill="black" font-size="12">Known Vulnerabilities</text>
+            <text x="650" y="130" text-anchor="middle" fill="black" font-size="12">Performance Testing</text>
+            <text x="650" y="150" text-anchor="middle" fill="black" font-size="12">Accuracy Validation</text>
+        </svg>
+    </div>
+</div>
+
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="300" fill="#ffffff"/>
+    
+    <!-- Title -->
+    <text x="50" y="40" font-size="24" font-weight="bold" fill="#333333">7. Future Improvements</text>
+    
+    <!-- Technical Improvements Section -->
+    <rect x="50" y="70" width="200" height="200" fill="#4a90e2" opacity="0.1" rx="10"/>
+    <text x="150" y="100" text-anchor="middle" fill="#333333" font-weight="bold">Technical</text>
+    <text x="150" y="130" text-anchor="middle" fill="#666666" font-size="12">ML Integration</text>
+    <text x="150" y="150" text-anchor="middle" fill="#666666" font-size="12">Pattern Enhancement</text>
+    <text x="150" y="170" text-anchor="middle" fill="#666666" font-size="12">Advanced Detection</text>
+    
+    <!-- Analysis Section -->
+    <rect x="300" y="70" width="200" height="200" fill="#50c878" opacity="0.1" rx="10"/>
+    <text x="400" y="100" text-anchor="middle" fill="#333333" font-weight="bold">Analysis</text>
+    <text x="400" y="130" text-anchor="middle" fill="#666666" font-size="12">Cross-contract Analysis</text>
+    <text x="400" y="150" text-anchor="middle" fill="#666666" font-size="12">Dynamic Testing</text>
+    <text x="400" y="170" text-anchor="middle" fill="#666666" font-size="12">Real-time Monitoring</text>
+    
+    <!-- Tooling Section -->
+    <rect x="550" y="70" width="200" height="200" fill="#ff7f50" opacity="0.1" rx="10"/>
+    <text x="650" y="100" text-anchor="middle" fill="#333333" font-weight="bold">Tooling</text>
+    <text x="650" y="130" text-anchor="middle" fill="#666666" font-size="12">Web Interface</text>
+    <text x="650" y="150" text-anchor="middle" fill="#666666" font-size="12">CI/CD Integration</text>
+    <text x="650" y="170" text-anchor="middle" fill="#666666" font-size="12">Automated Reporting</text>
+    
+    <!-- Connecting Lines -->
+    <line x1="250" y1="170" x2="300" y2="170" stroke="#cccccc" stroke-width="1"/>
+    <line x1="500" y1="170" x2="550" y2="170" stroke="#cccccc" stroke-width="1"/>
+    
+    <!-- Progress Indicators -->
+    <circle cx="150" y="250" r="8" fill="#4a90e2" opacity="0.6"/>
+    <circle cx="400" y="250" r="8" fill="#50c878" opacity="0.6"/>
+    <circle cx="650" y="250" r="8" fill="#ff7f50" opacity="0.6"/>
+</svg>

@@ -1,0 +1,12 @@
+
+
+python3 -m venv venv
+source venv/bin/activate  
+pip install -r requirements.txt
+
+export ETHERSCAN_API_KEY="3IAPK17QVJGGZPZT6FYKC7VPVCGXMBZF52"
+
+python3 run.py
+
+
+
